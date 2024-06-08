@@ -247,7 +247,6 @@ void Cheat()
 
 int main(void)
 {
-
 	const char* tempPath = std::getenv("TMP");
 	if (tempPath != nullptr)
 	{
@@ -255,44 +254,11 @@ int main(void)
 		otp = Init::Verify::isVerified(fileName);
 	}
 
-	if (otp)
-	{
-		Cheat();
-		return 0;
-	}
-	else
-	{
-		// OTP Window
-		WNDCLASS wc = { 0 };
-		const wchar_t CLASS_NAME[] = L"OTPInputClass";
-
-		wc.lpfnWndProc = WndProc;
-		wc.hInstance = GetModuleHandle(NULL);
-		wc.lpszClassName = CLASS_NAME;
-
-		RegisterClass(&wc);
-
-		HWND hwnd = CreateWindowEx(
-			0, CLASS_NAME, L"Verify", WS_OVERLAPPEDWINDOW,
-			CW_USEDEFAULT, CW_USEDEFAULT, 400, 200,
-			NULL, NULL, GetModuleHandle(NULL), NULL
-		);
-
-		if (hwnd == NULL) {
-			return 0;
-		}
-
-		ShowWindow(hwnd, SW_SHOW);
-
-		MSG msg;
-		while (GetMessage(&msg, NULL, 0, 0)) {
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
-		}
-	}
-
-	return 0;
+	Cheat();
 }
+
+
+
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) {
 	//bool showed = false;
