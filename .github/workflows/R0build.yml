@@ -2,9 +2,9 @@ name: build x64 release ci
 
 on: 
   push:
-    branches: [ "main" ]
+    branches: [ "R0" ]
   #pull_request:
-    #branches: [ "main" ]
+    #branches: [ "R0" ]
 
 jobs:
   build:
