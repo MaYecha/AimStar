@@ -2,7 +2,7 @@ name: build x64 release ci
 
 on: 
   push:
-    分支: [ "main" ]
+    branches: [ "main" ]
   #pull_request:
     #branches: [ "main" ]
 
@@ -15,10 +15,10 @@ jobs:
         uses: microsoft/setup-msbuild@main
       - name: Build with MSBuild
         run: msbuild CS2_External\CS2_External.vcxproj /p:Configuration=Release /p:Platform=x64
-      - name: Rename EXE to AimStarR0-${{github.sha}}.exe
+      - name: Rename EXE to AimStar-${{github.sha}}.exe
         run: |
-          del AimStarR0-*.exe
-          ren AimStarR0.exe AimStarR0-${{github.sha}}.exe
+          del AimStar-*.exe
+          ren AimStar.exe AimStar-${{github.sha}}.exe
         working-directory: CS2_External\x64\Release\
       - name: Upload the output
         uses: actions/upload-artifact@main
@@ -37,8 +37,8 @@ jobs:
       - name: Zip ci
         uses: vimtor/action-zip@master
         with:
-          files: ./ci/AimStarR0-${{github.sha}}.exe           
-          dest: AimStarR0-Autobuild.zip
+          files: ./ci/AimStar-${{github.sha}}.exe           
+          dest: AimStar-Autobuild.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run latest-tag
@@ -62,5 +62,3 @@ jobs:
           files: |
             AimStarR0-Autobuild.zip
           prerelease: true
-
-
