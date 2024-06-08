@@ -39,8 +39,6 @@ jobs:
         with:
           files: ./ci/AimStar-${{github.sha}}.exe           
           dest: AimStar-Autobuild.zip
-      - name: Delete tag
-        run: gh release delete autobuild --cleanup-tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run latest-tag
