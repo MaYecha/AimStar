@@ -34,7 +34,7 @@ bool Offset::UpdateOffsets()
 
 	std::string dumper_offsets = offsetPath + "\\offsets.json";
 	std::string dumper_buttons = offsetPath + "\\buttons.json";
-	std::string dumper_client = offsetPath + "\\client.json";
+	std::string dumper_client = offsetPath + "\\client.dll.json";
 
 	std::map<std::string, int> offsets, buttons;
 	OffsetsParser(offsets, dumper_offsets, "client.dll");
