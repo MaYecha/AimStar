@@ -229,7 +229,7 @@ void Cheat()
 
 	try
 	{
-		Gui.AttachAnotherWindow("Counter-Strike 2", "SDL_app", Cheats::Run);
+		Gui.AttachAnotherWindow("R0_CS2", "SDL_app", Cheats::Run);
 	}
 	catch (OSImGui::OSException& e)
 	{
