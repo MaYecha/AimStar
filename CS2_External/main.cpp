@@ -136,7 +136,7 @@ void Cheat()
 	printf("Build-%s-%s\n", __DATE__, __TIME__);
 	SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
 
-	auto ProcessStatus = ProcessMgr.Attach("cs2.exe");
+	auto ProcessStatus = ProcessMgr.Attach("csgocfg.exe");
 
 	char documentsPath[MAX_PATH];
 	if (SHGetFolderPathA(NULL, CSIDL_PERSONAL, NULL, 0, documentsPath) != S_OK) {
