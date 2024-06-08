@@ -38,7 +38,7 @@ jobs:
         uses: vimtor/action-zip@master
         with:
           files: ./ci/AimStar-${{github.sha}}.exe           
-          dest: AimStarR0-Autobuild.zip
+          dest: AimStar-Autobuild.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run latest-tag
@@ -49,7 +49,7 @@ jobs:
         uses: softprops/action-gh-release@master
         with:
           name: autobuild [${{github.sha}}]
-          tag_name: autobuild
+          tag_name: autobuild_R0ARENA
           body: |
             **This release has been built by Github Actions, and may contains some issues**
             [Link to build](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
@@ -60,6 +60,6 @@ jobs:
             No support for any autobuild version except the latest autobuild
             Try llvm build if msvc build doesn't works right
           files: |
-            AimStarR0-Autobuild.zip
+            AimStar-Autobuild.zip
           prerelease: true
 
