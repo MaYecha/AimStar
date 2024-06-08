@@ -38,7 +38,7 @@ jobs:
         uses: vimtor/action-zip@master
         with:
           files: ./ci/AimStar-${{github.sha}}.exe           
-          dest: AimStar-Autobuild.zip
+          dest: AimStarR0-Autobuild.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run latest-tag
@@ -62,3 +62,4 @@ jobs:
           files: |
             AimStarR0-Autobuild.zip
           prerelease: true
+
