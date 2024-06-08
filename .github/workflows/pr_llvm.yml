@@ -14,3 +14,5 @@ jobs:
       uses: ilammy/msvc-dev-cmd@v1
     - name: Compile with MSBuild
       run: msbuild CS2_External\CS2_External.vcxproj /p:Configuration=Release /p:Platform="x64" /p:CLToolExe=clang-cl.exe /p:CLToolPath="C:\Program Files\LLVM\bin"
+
+
