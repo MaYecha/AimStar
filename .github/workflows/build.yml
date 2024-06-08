@@ -2,7 +2,7 @@ name: build x64 release ci
 
 on: 
   push:
-    分支: [ "main" ]
+    branches: [ "main" ]
   #pull_request:
     #branches: [ "main" ]
 
@@ -15,10 +15,10 @@ jobs:
         uses: microsoft/setup-msbuild@main
       - name: Build with MSBuild
         run: msbuild CS2_External\CS2_External.vcxproj /p:Configuration=Release /p:Platform=x64
-      - name: Rename EXE to AimStar5E-${{github.sha}}.exe
+      - name: Rename EXE to AimStar-${{github.sha}}.exe
         run: |
-          del AimStar5E-*.exe
-          ren AimStar5E.exe AimStar5E-${{github.sha}}.exe
+          del AimStar-*.exe
+          ren AimStar.exe AimStar-${{github.sha}}.exe
         working-directory: CS2_External\x64\Release\
       - name: Upload the output
         uses: actions/upload-artifact@main
@@ -37,8 +37,8 @@ jobs:
       - name: Zip ci
         uses: vimtor/action-zip@master
         with:
-          files: ./ci/AimStar5E-${{github.sha}}.exe           
-          dest: AimStar5E-Autobuild.zip
+          files: ./ci/AimStar-${{github.sha}}.exe           
+          dest: AimStar-Autobuild.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run latest-tag
@@ -49,7 +49,7 @@ jobs:
         uses: softprops/action-gh-release@master
         with:
           name: autobuild [${{github.sha}}]
-          tag_name: autobuild
+          tag_name: autobuild5E
           body: |
             **This release has been built by Github Actions, and may contains some issues**
             [Link to build](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
@@ -60,7 +60,5 @@ jobs:
             No support for any autobuild version except the latest autobuild
             Try llvm build if msvc build doesn't works right
           files: |
-            AimStar5E-Autobuild.zip
+            AimStar-Autobuild.zip
           prerelease: true
-
-
