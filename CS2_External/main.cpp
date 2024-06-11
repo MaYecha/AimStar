@@ -1,77 +1,77 @@
 
-#定义_ CRT _ SECURE _ NO _ WARNINGS
-#包括"骗子h "
-#包括"抵消h "
-#包括"资源/语言h "
-#包括"实用程序/初始/初始化h "
-#包括"Utils/ConfigSaver .hpp"
-#包括<慢性的>
-#包括<文件系统>
-#包括《伊奥曼尼普》
-#包括《已知文件夹h >
-#包括《什洛布》.h >
-#包括《标准》杂志.h >
-#包括"实用工具/卷曲/卷曲h "
-#包括" Utils/json/json .hpp”
-使用 命名空间标准
+#define _CRT_SECURE_NO_WARNINGS
+#include "Cheats.h"
+#include "Offsets.h"
+#include "Resources/Language.h"
+#include "Utils/Initial/Init.h"
+#include "Utils/ConfigSaver.hpp"
+#include <chrono>
+#include <filesystem>
+#include <iomanip>
+#include <KnownFolders.h>
+#include <ShlObj.h>
+#include <stdio.h>
+#include "Utils/curl/curl.h"
+#include "Utils/json/json.hpp"
+using namespace std;
 /*
-贡献者：
-Shinyaluvs，
-Nx0Ri，
-字节库,
-斯卡博,
-佩德罗贡萨尔维斯,
-KeysIsCool，
-肯尼,
-Cr1ppl3，
-泰利苏,
-sh1pi，
-托福考试,
-流行音乐节目主持人神圣的,
-托基纳阿,
-更快_bbc、
-vsantos1，
-5mmod，
-gScream，
-哈泽蒂克,
-冥河,
-用户1232,
-TaKaStuKi.sen
+Contributors:
+	Shinyaluvs,
+	Nx0Ri,
+	ByteCorum,
+	Skarbor,
+	PedroGoncalves,
+	KeysIsCool,
+	Kenny,
+	Cr1ppl3,
+	Tairitsu,
+	sh1pi,
+	toepas,
+	djsacred,
+	tokinaa,
+	faster_bbc,
+	vsantos1,
+	5mmod,
+	gScream,
+	Hazetick,
+	styx,
+	user1232,
+	TaKaStuKi.sen
 */
 
-命名空间fs =文件系统；
-布尔otp =错误的；
-字符串文件名；
+namespace fs = filesystem;
+bool otp = false;
+string fileName;
 
-空的出口()
+void Exit()
 {
-系统("暂停");
-出口(0);
+	system("pause");
+	exit(0);
 }
 
-LRESULT回调WndProc(HWND hwnd消息WPARAM wParam，LPARAM lParam);
+LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 
-空的随机标题()
+void RandomTitle()
 {
-constexprint长度=25;
-常数 汽车字符=文本(“0123456789abcdefghijklmnopqrstuvwxyzabbdefghijklmnopqrstuvwxyz `-= ~！@#$%^&*()_+,./;'[]|{}:?");
-TCHAR头衔[长度+1]{};
+	constexpr int length = 25;
+	const auto characters = TEXT("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`-=~!@#$%^&*()_+,./;'[]|{}:?");
+	TCHAR title[length + 1]{};
 
-	为 (int j =0；j！=长度；j++)
+	for (int j = 0; j != length; j++)
 	{
-标题[j]+=字符[边缘() % 95];
+		title[j] += characters[rand() % 95];
 	}
 
-setconsolettitle(标题);
+	SetConsoleTitle(title);
 }
 
 
-使用JSON = nlohmann::JSON；
+using json = nlohmann::json;
 
 
-静电尺寸_t写回调(无效*内容，size_t size，size_t nmemb，void* userp) {
-	((std::string*)userp)->附加((字符*)内容,大小* nmemb);
-返回大小* nmemb
+static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
+	((std::string*)userp)->append((char*)contents, size * nmemb);
+	return size * nmemb;
 }
 
 
