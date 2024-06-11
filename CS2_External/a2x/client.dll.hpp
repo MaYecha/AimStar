@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-11 07:44:46.985433800 UTC
+// 2024-06-11 10:47:50.544150200 UTC
 
 #pragma once
 
@@ -683,7 +683,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flForceClientTime = 0x554; // float32
                 constexpr std::ptrdiff_t m_nSceneStringIndex = 0x558; // uint16
                 constexpr std::ptrdiff_t m_bClientOnly = 0x55A; // bool
-                constexpr std::ptrdiff_t m_hOwner = 0x55C; // CHandle<C_BaseFlex>
+                constexpr std::ptrdiff_t m_hOwner = 0x55C; // 
                 constexpr std::ptrdiff_t m_hActorList = 0x560; // C_NetworkUtlVectorBase<CHandle<C_BaseFlex>>
                 constexpr std::ptrdiff_t m_bWasPlaying = 0x578; // bool
                 constexpr std::ptrdiff_t m_QueuedEvents = 0x588; // CUtlVector<C_SceneEntity::QueuedEvents_t>
@@ -2542,7 +2542,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bBuiltRightHanded = 0x108; // bool
                 constexpr std::ptrdiff_t m_bAllowFlipping = 0x109; // bool
                 constexpr std::ptrdiff_t m_sMuzzleAttachment = 0x110; // CUtlString
-                constexpr std::ptrdiff_t m_szMuzzleFlashParticle = 0x118; // 
+                constexpr std::ptrdiff_t m_szMuzzleFlashParticle = 0x118; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
                 constexpr std::ptrdiff_t m_iFlags = 0x1F8; // ItemFlagTypes_t
                 constexpr std::ptrdiff_t m_nPrimaryAmmoType = 0x1F9; // AmmoIndex_t
                 constexpr std::ptrdiff_t m_nSecondaryAmmoType = 0x1FA; // AmmoIndex_t
@@ -2740,7 +2740,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_PredNetIntVariables = 0x50; // C_NetworkUtlVectorBase<int32>
                 constexpr std::ptrdiff_t m_PredNetUInt32Variables = 0x68; // C_NetworkUtlVectorBase<uint32>
                 constexpr std::ptrdiff_t m_PredNetUInt64Variables = 0x80; // C_NetworkUtlVectorBase<uint64>
-                constexpr std::ptrdiff_t m_PredNetFloatVariables = 0x98; // C_NetworkUtlVectorBase<float32>
+                constexpr std::ptrdiff_t m_PredNetFloatVariables = 0x98; // C_NetworkUtlVectorBase<float32
                 constexpr std::ptrdiff_t m_PredNetVectorVariables = 0xB0; // C_NetworkUtlVectorBase<Vector>
                 constexpr std::ptrdiff_t m_PredNetQuaternionVariables = 0xC8; // C_NetworkUtlVectorBase<Quaternion>
                 constexpr std::ptrdiff_t m_PredNetGlobalSymbolVariables = 0xE0; // C_NetworkUtlVectorBase<CGlobalSymbol>
@@ -4504,7 +4504,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPrecipitationVData {
-                constexpr std::ptrdiff_t m_szParticlePrecipitationEffect = 0x28; // 
+                constexpr std::ptrdiff_t m_szParticlePrecipitationEffect = 0x28; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
                 constexpr std::ptrdiff_t m_flInnerDistance = 0x108; // float32
                 constexpr std::ptrdiff_t m_nAttachType = 0x10C; // ParticleAttachment_t
                 constexpr std::ptrdiff_t m_bBatchSameVolumeType = 0x110; // bool
@@ -5769,7 +5769,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_CPropDataComponent (CPropDataComponent::Storage_t)
             // NetworkVarNames: m_noGhostCollision (bool)
             namespace C_BreakableProp {
-                constexpr std::ptrdiff_t m_CPropDataComponent = 0xF10; // CPropDataComponent
+                constexpr std::ptrdiff_t m_CPropDataComponent = 0xF10; // 
                 constexpr std::ptrdiff_t m_OnBreak = 0xF50; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnHealthChanged = 0xF78; // CEntityOutputTemplate<float32>
                 constexpr std::ptrdiff_t m_OnTakeDamage = 0xFA0; // CEntityIOOutput
@@ -5923,12 +5923,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_szWorldDroppedModel = 0x418; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
                 constexpr std::ptrdiff_t m_szAimsightLensMaskModel = 0x4F8; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
                 constexpr std::ptrdiff_t m_szMagazineModel = 0x5D8; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
-                constexpr std::ptrdiff_t m_szHeatEffect = 0x6B8; // 
-                constexpr std::ptrdiff_t m_szEjectBrassEffect = 0x798; // 
-                constexpr std::ptrdiff_t m_szMuzzleFlashParticleAlt = 0x878; // 
-                constexpr std::ptrdiff_t m_szMuzzleFlashThirdPersonParticle = 0x958; // 
-                constexpr std::ptrdiff_t m_szMuzzleFlashThirdPersonParticleAlt = 0xA38; // 
-                constexpr std::ptrdiff_t m_szTracerParticle = 0xB18; // 
+                constexpr std::ptrdiff_t m_szHeatEffect = 0x6B8; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
+                constexpr std::ptrdiff_t m_szEjectBrassEffect = 0x798; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
+                constexpr std::ptrdiff_t m_szMuzzleFlashParticleAlt = 0x878; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
+                constexpr std::ptrdiff_t m_szMuzzleFlashThirdPersonParticle = 0x958; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
+                constexpr std::ptrdiff_t m_szMuzzleFlashThirdPersonParticleAlt = 0xA38; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
+                constexpr std::ptrdiff_t m_szTracerParticle = 0xB18; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
                 constexpr std::ptrdiff_t m_GearSlot = 0xBF8; // gear_slot_t
                 constexpr std::ptrdiff_t m_GearSlotPosition = 0xBFC; // int32
                 constexpr std::ptrdiff_t m_DefaultLoadoutSlot = 0xC00; // loadout_slot_t
@@ -5962,7 +5962,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRecoilAngleVariance = 0xCA4; // CFiringModeFloat
                 constexpr std::ptrdiff_t m_flRecoilMagnitude = 0xCAC; // CFiringModeFloat
                 constexpr std::ptrdiff_t m_flRecoilMagnitudeVariance = 0xCB4; // CFiringModeFloat
-                constexpr std::ptrdiff_t m_nTracerFrequency = 0xCBC; // 
+                constexpr std::ptrdiff_t m_nTracerFrequency = 0xCBC; // CFiringModeInt
                 constexpr std::ptrdiff_t m_flInaccuracyJumpInitial = 0xCC4; // float32
                 constexpr std::ptrdiff_t m_flInaccuracyJumpApex = 0xCC8; // float32
                 constexpr std::ptrdiff_t m_flInaccuracyReload = 0xCCC; // float32
