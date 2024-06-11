@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-05 00:45:27.941820300 UTC
+// 2024-06-11 01:36:41.507730200 UTC
 
 #pragma once
 
@@ -5496,7 +5496,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_thirdPersonFireSequences = 0x1648; // CUtlVector<HSequence>
                 constexpr std::ptrdiff_t m_hCurrentThirdPersonSequence = 0x1660; // HSequence
                 constexpr std::ptrdiff_t m_nSilencerBoneIndex = 0x1664; // int32
-                constexpr std::ptrdiff_t m_thirdPersonSequences = 0x1668; // HSequence[7]
+                constexpr std::ptrdiff_t m_thirdPersonSequences = 0x1668; // 
                 constexpr std::ptrdiff_t m_ClientPreviousWeaponState = 0x16A0; // CSWeaponState_t
                 constexpr std::ptrdiff_t m_iState = 0x16A4; // CSWeaponState_t
                 constexpr std::ptrdiff_t m_flCrosshairDistance = 0x16A8; // float32
