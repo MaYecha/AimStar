@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-11 10:47:50.544150200 UTC
+// 2024-06-11 13:49:26.016264900 UTC
 
 #pragma once
 
@@ -1217,7 +1217,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iRetakesMVPBoostItem = 0x164C; // int32
                 constexpr std::ptrdiff_t m_RetakesMVPBoostExtraUtility = 0x1650; // loadout_slot_t
                 constexpr std::ptrdiff_t m_bNeedToReApplyGloves = 0x1670; // bool
-                constexpr std::ptrdiff_t m_EconGloves = 0x1678; // C_EconItemView
+                constexpr std::ptrdiff_t m_EconGloves = 0x1678; // 
                 constexpr std::ptrdiff_t m_nEconGlovesChanged = 0x1AC0; // uint8
                 constexpr std::ptrdiff_t m_bMustSyncRagdollState = 0x1AC1; // bool
                 constexpr std::ptrdiff_t m_nRagdollDamageBone = 0x1AC4; // int32
@@ -2254,7 +2254,7 @@ namespace cs2_dumper {
             // MNetworkIncludeByName
             // NetworkVarNames: m_Item (CEconItemView)
             namespace C_AttributeContainer {
-                constexpr std::ptrdiff_t m_Item = 0x50; // C_EconItemView
+                constexpr std::ptrdiff_t m_Item = 0x50; // 
                 constexpr std::ptrdiff_t m_iExternalItemProviderRegisteredToken = 0x498; // int32
                 constexpr std::ptrdiff_t m_ullRegisteredAsItemID = 0x4A0; // uint64
             }
@@ -5651,7 +5651,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLastThinkTick = 0x300; // GameTick_t
                 constexpr std::ptrdiff_t m_pGameSceneNode = 0x308; // CGameSceneNode*
                 constexpr std::ptrdiff_t m_pRenderComponent = 0x310; // CRenderComponent*
-                constexpr std::ptrdiff_t m_pCollision = 0x318; // CCollisionProperty*
+                constexpr std::ptrdiff_t m_pCollision = 0x318; // 
                 constexpr std::ptrdiff_t m_iMaxHealth = 0x320; // int32
                 constexpr std::ptrdiff_t m_iHealth = 0x324; // int32
                 constexpr std::ptrdiff_t m_lifeState = 0x328; // uint8
@@ -5769,7 +5769,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_CPropDataComponent (CPropDataComponent::Storage_t)
             // NetworkVarNames: m_noGhostCollision (bool)
             namespace C_BreakableProp {
-                constexpr std::ptrdiff_t m_CPropDataComponent = 0xF10; // 
+                constexpr std::ptrdiff_t m_CPropDataComponent = 0xF10; // CPropDataComponent
                 constexpr std::ptrdiff_t m_OnBreak = 0xF50; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnHealthChanged = 0xF78; // CEntityOutputTemplate<float32>
                 constexpr std::ptrdiff_t m_OnTakeDamage = 0xFA0; // CEntityIOOutput
@@ -5880,9 +5880,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nOrdinal = 0x550; // int32
                 constexpr std::ptrdiff_t m_sWeaponName = 0x558; // CUtlString
                 constexpr std::ptrdiff_t m_xuid = 0x560; // uint64
-                constexpr std::ptrdiff_t m_agentItem = 0x568; // C_EconItemView
-                constexpr std::ptrdiff_t m_glovesItem = 0x9B0; // C_EconItemView
-                constexpr std::ptrdiff_t m_weaponItem = 0xDF8; // C_EconItemView
+                constexpr std::ptrdiff_t m_agentItem = 0x568; // 
+                constexpr std::ptrdiff_t m_glovesItem = 0x9B0; // 
+                constexpr std::ptrdiff_t m_weaponItem = 0xDF8; // 
             }
             // Parent: C_DynamicProp
             // Fields count: 0
